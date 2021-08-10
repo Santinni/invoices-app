@@ -1,0 +1,46 @@
+/* --- Variables --- */
+
+/* --- Spacing --- */
+
+$gap-vertical: 1.5rem;
+$gap-horizontal: 1.5rem;
+
+/* --- Colors --- */
+$color-brand-primary: #00264C;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #6C6F77;
+$color-blue: #0070CB;
+$color-green: #0FC986;
+
+$color-text: $color-gray;
+$color-link: $color-blue;
+
+/* --- Box shadow --- */
+$box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+
+/* --- Fonts --- */
+$font-primary: "Open Sans", Helvetica, Arial, sans-serif;
+$font-secondary: "Klavika", "Open Sans", Helvetica, Arial, sans-serif;
+
+/* --- Breakpoints --- */
+// Example: @media (min-width: $bp-sm) {}
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1500px;
+
+$bp-sm-max: $bp-sm - 1;
+$bp-md-max: $bp-md - 1;
+$bp-lg-max: $bp-lg - 1;
+$bp-xl-max: $bp-xl - 1;
+$bp-xxl-max: $bp-xxl - 1;
+
+/* --- Transitions --- */
+$transition-duration: .2s;
+$transition-function: ease-in-out;
+$transition: $transition-duration $transition-function;
+
+/* --- Buttons --- */
+$button-font-size: 1.3rem;

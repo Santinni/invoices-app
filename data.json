@@ -1,0 +1,54 @@
+[
+  {
+    "supplyPoint": {
+      "id": "5add9bf6-cd4d-4d94-ae74-2efca6a4c544",
+      "name": "Domov Sokolovská",
+      "address": "Sokolovská 240, Praha 9"
+    },
+    "period": "05/2020",
+    "type": "advance",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "pending",
+    "payDueDate": "2021-05-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "5add9bf6-cd4d-4d94-ae74-2efca6a4c544",
+      "name": "Domov Sokolovská",
+      "address": "Sokolovská 240, Praha 9"
+    },
+    "period": "04/2020",
+    "type": "advance",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "processing",
+    "payDueDate": "2021-04-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "5add9bf6-cd4d-4d94-ae74-2efca6a4c544",
+      "name": "Domov Sokolovská",
+      "address": "Sokolovská 240, Praha 9"
+    },
+    "period": "03/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-03-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "5add9bf6-cd4d-4d94-ae74-2efca6a4c544",
+      "name": "Domov Sokolovská",
+      "address": "Sokolovská 240, Praha 9"
+    },
+    "period": "02/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-02-15"
+  }
+]
