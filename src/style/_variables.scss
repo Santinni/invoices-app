@@ -2,14 +2,15 @@
 
 /* --- Spacing --- */
 
-$gap-vertical: 1.5rem;
-$gap-horizontal: 1.5rem;
+$gap-vertical: 1rem;
+$gap-horizontal: 1rem;
 
 /* --- Colors --- */
 $color-brand-primary: #00264C;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-gray: #6C6F77;
+$color-gray-1: #F3F3F4;
 $color-blue: #0070CB;
 $color-green: #0FC986;
 
@@ -20,11 +21,11 @@ $color-link: $color-blue;
 $box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
 
 /* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 $font-primary: "Open Sans", Helvetica, Arial, sans-serif;
 $font-secondary: "Klavika", "Open Sans", Helvetica, Arial, sans-serif;
 
 /* --- Breakpoints --- */
-// Example: @media (min-width: $bp-sm) {}
 $bp-sm: 576px;
 $bp-md: 768px;
 $bp-lg: 992px;
@@ -44,3 +45,15 @@ $transition: $transition-duration $transition-function;
 
 /* --- Buttons --- */
 $button-font-size: 1.3rem;
+
+/* --- Mixins --- */
+@mixin flexCentered {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin hoverScale {
+    transform: scale(1.05);
+	transition: all $transition;
+}

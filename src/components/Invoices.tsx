@@ -14,7 +14,7 @@ function Invoices() {
 					<Button
 						title="Zobrazit vše"
 						variant="text"
-						size="small"
+						size="large"
 						withIcon
 					/>
 				</div>

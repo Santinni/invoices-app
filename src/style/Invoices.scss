@@ -1,3 +1,11 @@
-.invoicesWrap {
-    width: 100%;
+@import "variables";
+
+.card {
+	padding: $gap-vertical*3 $gap-horizontal*3;
+	box-shadow: $box-shadow;
+}
+
+.card__header {
+	@include flexCentered;
+	justify-content: space-between;
 }

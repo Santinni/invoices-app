@@ -1,10 +1,8 @@
 @import "variables";
 
 .button {
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flexCentered;
+	cursor: pointer;
 	font-weight: bold;
 	border-radius: 5px;
 	font-family: $font-primary;
@@ -27,6 +25,10 @@
 		padding: 16px 20px;
 	}
 
+	&>.ico {
+		margin-left: $gap-vertical;
+	}
+
 }
 
 .button--contained {
@@ -39,7 +41,12 @@
 
 .button--text {
 	color: $color-brand-primary;
+	background: none;
+	border: none;
 
+	&:hover {
+		@include hoverScale;
+	}
 }
 
 .button--colorDefault {
