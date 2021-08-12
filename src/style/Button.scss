@@ -1,0 +1,55 @@
+@import "variables";
+
+.button {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	border-radius: 5px;
+	font-family: $font-primary;
+
+	&.button--small {
+		font-size: 13px;
+		line-height: 18px;
+		padding: 6px 12px;
+	}
+
+	&.button--medium {
+		font-size: 14px;
+        line-height: 16px;
+		padding: 13px 20px;
+	}
+
+	&.button--large {
+		font-size: 16px;
+        line-height: 22px;
+		padding: 16px 20px;
+	}
+
+}
+
+.button--contained {
+
+}
+
+.button--outlined {
+
+}
+
+.button--text {
+	color: $color-brand-primary;
+
+}
+
+.button--colorDefault {
+
+}
+
+.button--colorPrimary {
+
+}
+
+.button--colorSecondary {
+
+}
