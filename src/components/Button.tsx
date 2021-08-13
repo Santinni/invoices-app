@@ -1,16 +1,16 @@
-import React from 'react';
 import '../style/Button.scss';
 import Icon from '../icons';
 
 export type ButtonProps = {
 	title?: string,
 	variant?: 'contained' | 'outlined' | 'text',
-	color?: 'default' | 'inherit' | 'primary' | 'secondary',
-	size?: 'small' | 'large',
+	color?: 'primary' | 'secondary',
+	size?: 'small' | 'medium' | 'large',
 	withIcon?: boolean,
+	onClick?: React.MouseEventHandler,
 };
 
-const Button = ({ title, variant, color, size, withIcon }: ButtonProps) => {
+const Button = ({ title, variant, color, size, withIcon, onClick }: ButtonProps) => {
 
 	const variantClass = () => {
 		if (!variant || variant === "contained") {
@@ -23,9 +23,7 @@ const Button = ({ title, variant, color, size, withIcon }: ButtonProps) => {
 	}
 
 	const colorClass = () => {
-		if (!color || color === "default") {
-			return "button--colorDefault"
-		} else if (color === "primary") {
+		if (!color || color === "primary") {
 			return "button--colorPrimary"
 		} else if (color === 'secondary') {
 			return "button--colorSecondary"
@@ -35,13 +33,15 @@ const Button = ({ title, variant, color, size, withIcon }: ButtonProps) => {
 	const sizeClass = () => {
 		if (!size || size === "small") {
 			return "button--small"
+		} else if (size === "medium") {
+			return "button--medium"
 		} else if (size === "large") {
 			return "button--large"
 		}
 	}
 
 	return (
-		<button className={`button ${variantClass()} ${colorClass()} ${sizeClass()}`}>
+		<button onClick={onClick} className={`button ${variantClass()} ${colorClass()} ${sizeClass()}`}>
 			{title}
 			{
 				withIcon && <Icon name="arrow" />

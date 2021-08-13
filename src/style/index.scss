@@ -1,11 +1,19 @@
 @import "variables";
 
 body {
-  @include flexCentered;
-  min-height: 100vh;
-  margin: 0;
-  font-family: $font-primary;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: $color-gray-1;
+	@include flexCentered;
+	min-height: 100vh;
+	margin: 0;
+	font-family: $font-primary;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: $color-gray-1;
+}
+
+h1 {
+	font-family: $font-secondary;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+	color: $color-brand-primary;
 }

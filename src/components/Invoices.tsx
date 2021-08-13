@@ -1,9 +1,14 @@
-import React from 'react';
 import '../style/Invoices.scss';
 import Button from './Button';
+import { useHistory } from 'react-router-dom';
+//import Table from './Table';
 
 
 function Invoices() {
+
+	const history = useHistory();
+	const handleClick = () => history.push('/all-invoices');
+
 	return (
 		<>
 			<div className="card">
@@ -16,10 +21,11 @@ function Invoices() {
 						variant="text"
 						size="large"
 						withIcon
+						onClick={handleClick}
 					/>
 				</div>
 				<div className="card__content">
-
+					{/* <Table /> */}
 				</div>
 			</div>
 		</>

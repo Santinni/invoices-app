@@ -1,11 +1,29 @@
 @import "variables";
 
 .card {
-	padding: $gap-vertical*3 $gap-horizontal*3;
+	padding: ($gap-horizontal*2) ($gap-vertical*2);
 	box-shadow: $box-shadow;
+	border-radius: $border-radius;
+	width: 100%;
+	background: $color-white;
+
+	@media (min-width: $bp-xxl) {
+		width: 980px;
+	}
 }
 
 .card__header {
 	@include flexCentered;
 	justify-content: space-between;
+
+	.card--error &{
+		justify-content: center;
+	}
+}
+
+.card__content {
+	.card--error &{
+		@include flexCentered;
+		flex-direction: column;
+	}
 }

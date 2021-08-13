@@ -1,4 +1,4 @@
-/* --- Variables --- */
+/* --- VARIABLES --- */
 
 /* --- Spacing --- */
 
@@ -11,6 +11,7 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-gray: #6C6F77;
 $color-gray-1: #F3F3F4;
+$color-gray-2: #DFE0E2;
 $color-blue: #0070CB;
 $color-green: #0FC986;
 
@@ -30,7 +31,7 @@ $bp-sm: 576px;
 $bp-md: 768px;
 $bp-lg: 992px;
 $bp-xl: 1200px;
-$bp-xxl: 1500px;
+$bp-xxl: 1440px;
 
 $bp-sm-max: $bp-sm - 1;
 $bp-md-max: $bp-md - 1;
@@ -43,8 +44,10 @@ $transition-duration: .2s;
 $transition-function: ease-in-out;
 $transition: $transition-duration $transition-function;
 
-/* --- Buttons --- */
-$button-font-size: 1.3rem;
+/* --- Border --- */
+$border-radius: 5px;
+$border-width: 2px;
+$border-style-s: solid;
 
 /* --- Mixins --- */
 @mixin flexCentered {

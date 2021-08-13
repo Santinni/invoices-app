@@ -4,7 +4,9 @@
 	@include flexCentered;
 	cursor: pointer;
 	font-weight: bold;
-	border-radius: 5px;
+	border-radius: $border-radius;
+	border-width: $border-width;
+	border-style: $border-style-s;
 	font-family: $font-primary;
 
 	&.button--small {
@@ -31,14 +33,6 @@
 
 }
 
-.button--contained {
-
-}
-
-.button--outlined {
-
-}
-
 .button--text {
 	color: $color-brand-primary;
 	background: none;
@@ -49,14 +43,61 @@
 	}
 }
 
-.button--colorDefault {
-
+.button--outlined {
+	background: $color-white;
 }
 
 .button--colorPrimary {
 
+	&.button--contained {
+		color: $color-white;
+		border-color: $color-green;
+		background: $color-green;
+
+		&:hover {
+			color: $color-green;
+			border-color: $color-green;
+			background: $color-white;
+			transition: $transition;
+		}
+	}
+
+	&.button--outlined {
+		color: $color-green;
+		border-color: $color-green;
+
+		&:hover {
+			color: $color-white;
+			background: $color-green;
+			transition: $transition;
+		}
+	}
 }
 
 .button--colorSecondary {
 
+	&.button--contained {
+		color: $color-white;
+		border-color: $color-blue;
+		background: $color-blue;
+
+		&:hover {
+			color: $color-blue;
+			border-color: $color-gray-1;
+			background: $color-white;
+			transition: $transition;
+		}
+	}
+
+	&.button--outlined {
+		color: $color-blue;
+		border-color: $color-gray-1;
+
+		&:hover {
+			color: $color-white;
+			border-color: $color-blue;
+			background: $color-blue;
+			transition: $transition;
+		}
+	}
 }
