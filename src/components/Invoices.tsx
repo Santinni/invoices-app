@@ -1,7 +1,7 @@
 import '../style/Invoices.scss';
 import Button from './Button';
 import { useHistory } from 'react-router-dom';
-//import Table from './Table';
+import Table from './Table';
 
 
 function Invoices() {
@@ -25,7 +25,7 @@ function Invoices() {
 					/>
 				</div>
 				<div className="card__content">
-					{/* <Table /> */}
+					<Table />
 				</div>
 			</div>
 		</>

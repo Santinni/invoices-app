@@ -1,0 +1,6 @@
+@import "variables";
+
+.table {
+    @include flexCentered;
+    flex-direction: column;
+}
