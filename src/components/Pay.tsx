@@ -3,7 +3,7 @@ import Button from './Button';
 import { useHistory } from 'react-router';
 
 
-function AllInvoices() {
+function Pay() {
 
 	const history = useHistory();
 	const handleClick = () => history.goBack();
@@ -13,7 +13,7 @@ function AllInvoices() {
 			<div className="card">
 				<div className="card__header">
 					<h1>
-						Všechny zálohy a faktury
+						Platební proces
 					</h1>
 					<Button
 						title="Zpět"
@@ -25,7 +25,7 @@ function AllInvoices() {
 				</div>
 				<div className="card__content">
 					<p>
-						Výpis záloh a faktur
+						Platba
 					</p>
 				</div>
 			</div>
@@ -33,4 +33,4 @@ function AllInvoices() {
 	);
 }
 
-export default AllInvoices;
+export default Pay;

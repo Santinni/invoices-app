@@ -1,5 +1,4 @@
-import React from 'react';
-import { Arrow, Clock, Fire, Check, Pending } from './Icons';
+import { Arrow, Clock, Fire, Check, Pending, Preloader } from './Icons';
 
 
 export type IconProps = {
@@ -21,6 +20,8 @@ const Icon = ({
 			return <Check className={`ico ico--${name}`} />;
 		case 'pending':
 			return <Pending className={`ico ico--${name}`} />;
+		case 'preloader':
+			return <Preloader className={`ico ico--${name}`} />;
 		default:
 			return <div></div>;
 	}

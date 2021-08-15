@@ -1,0 +1,21 @@
+@import "variables";
+
+.loader {
+	width: 3rem;
+	height: 3rem;
+	animation: Rotate 1500ms infinite linear;
+
+	svg {
+		fill: $color-brand-primary;
+	}
+}
+
+@keyframes Rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
