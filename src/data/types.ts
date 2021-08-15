@@ -9,10 +9,10 @@ declare module DataTypes {
     export interface RootObject {
         supplyPoint: SupplyPoint;
         period: string;
-        type: string;
+        type: "advance" | "invoice";
         amount: number;
         currency: string;
-        state: string;
+        state: "paid" | "processing" | "pending";
         payDueDate: string;
     }
 }

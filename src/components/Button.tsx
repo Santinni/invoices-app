@@ -7,7 +7,7 @@ export type ButtonProps = {
 	color?: 'primary' | 'secondary',
 	size?: 'small' | 'medium' | 'large',
 	withIcon?: boolean,
-	onClick?: React.MouseEventHandler,
+	onClick: React.MouseEventHandler,
 };
 
 const Button = ({ title, variant, color, size, withIcon, onClick }: ButtonProps) => {

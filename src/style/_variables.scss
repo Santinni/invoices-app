@@ -46,7 +46,8 @@ $transition: $transition-duration $transition-function;
 
 /* --- Border --- */
 $border-radius: 5px;
-$border-width: 2px;
+$border-width-1: 1px;
+$border-width-2: 2px;
 $border-style-s: solid;
 
 /* --- Mixins --- */
