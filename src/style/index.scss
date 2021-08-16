@@ -10,6 +10,10 @@ body {
 	background: $color-gray-1;
 }
 
+#invoicesApp {
+	@include flexCentered;
+}
+
 h1 {
 	font-family: $font-secondary;
 	font-weight: 500;

@@ -1,5 +1,4 @@
 import { Switch, Route } from 'react-router';
-import './style/App.scss';
 import Invoices from './components/Invoices';
 import AllInvoices from './components/AllInvoices';
 import Pay from './components/Pay';

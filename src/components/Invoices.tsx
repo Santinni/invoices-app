@@ -22,6 +22,7 @@ function Invoices() {
 						size="large"
 						withIcon
 						onClick={handleClick}
+						customClass="util-mg-l"
 					/>
 				</div>
 				<div className="card__content">

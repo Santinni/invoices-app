@@ -7,7 +7,7 @@ import Icon from '../icons';
 import Button from './Button';
 //import TableRow from './TableRow';
 
-//TODO: doresit sklonovani dnu pro payment, do Table vytvorit komponentu TableRow, dostylovat + dlazdicove zobrazeni na mobilu, dostylovat loader(jeho pozice) nebo poresit placeholder pro tablerow, mozna roztridit scss k jednotlivym komponentam, poresit handleclick jako jednu fci pro odkazovaci buttony
+//TODO: doresit sklonovani dnu pro payment, do Table vytvorit komponentu TableRow, dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, dostylovat loader(jeho pozice) nebo poresit placeholder pro tablerow, mozna roztridit scss k jednotlivym komponentam, poresit handleclick jako jednu fci pro odkazovaci buttony
 
 function Table() {
 	const [apiData, setData] = useState<DataTypes.RootObject[]>([]);
@@ -81,10 +81,19 @@ function Table() {
 
 	const history = useHistory();
 	const handleClick = (route: string) => history.push(`/${route}`);
+	const spaceSeparator = (value: number) => {
+		if (value % 1 === 0) {
+			return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		} else {
+			let dividedValue = value.toString().split(".");
+			dividedValue[0] = dividedValue[0].replace(/\B(?=(\d{3})+(?!\d))/g, "-");
+			return dividedValue.join(".");
+		}
+	}
 
 	return (
 		<div className="table">
-			<div className="table__header">
+			<div className="table__header grid util-fw-700">
 				<div>Odběrné místo</div>
 				<div>Období</div>
 				<div>Typ</div>
@@ -98,9 +107,9 @@ function Table() {
 							<>
 								{apiData.map(
 									item => (
-										<div className="table__row">
+										<div className={`table__row grid ${item.state === 'pending' ? 'util-fw-700' : ""}`}>
 											<div className="table__data">
-												<div>
+												<div className="table__ico">
 													{<Icon name="fire" />}
 												</div>
 												<div>
@@ -124,34 +133,36 @@ function Table() {
 												}
 											</div>
 											<div className="table__data">
-												{item.amount ? item.amount : "-"}
+												{item.amount ? spaceSeparator(item.amount) : "-"}
 												&nbsp;
 												{item.currency ? item.currency : "-"}
 											</div>
 											<div className="table__data">
-												{
-													item.state ?
-														item.state === "pending" ? <Icon name="pending" />
-															: item.state === "processing" ? <Icon name="clock" />
-																: item.state === "paid" && <Icon name="check" />
-														: "-"
-												}
+												<div className="table__ico">
+													{
+														item.state ?
+															item.state === "pending" ? <Icon name="pending" />
+																: item.state === "processing" ? <Icon name="clock" />
+																	: item.state === "paid" && <Icon name="check" />
+															: "-"
+													}
+												</div>
 												{item.state && item.payDueDate ? payment(item.state, item.payDueDate) : '-'}
 											</div>
-											<div className="table__data">
+											<div className="table__data util-jc-flex-e">
 												{
 													item.state === 'pending' ?
 														<Button
 															title="Zaplatit"
 															variant="contained"
-															size="medium"
+															size="small"
 															color="primary"
 															onClick={() => { handleClick("payment-process"); }} />
 														:
 														<Button
 															title="Více"
 															variant="outlined"
-															size="medium"
+															size="small"
 															color="secondary"
 															onClick={() => { handleClick("contract-detail"); }} />
 												}
