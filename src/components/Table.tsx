@@ -7,7 +7,7 @@ import Icon from '../icons';
 import Button from './Button';
 //import TableRow from './TableRow';
 
-//TODO: doresit sklonovani dnu pro payment, do Table vytvorit komponentu TableRow, dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, dostylovat loader(jeho pozice) nebo poresit placeholder pro tablerow, mozna roztridit scss k jednotlivym komponentam, poresit handleclick jako jednu fci pro odkazovaci buttony
+//TODO: doresit sklonovani dnu pro payment, do Table vytvorit komponentu TableRow, dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, poresit placeholder pro table content?, mozna roztridit scss k jednotlivym komponentam, poresit handleclick jako jednu fci pro odkazovaci buttony
 
 function Table() {
 	const [apiData, setData] = useState<DataTypes.RootObject[]>([]);
@@ -86,7 +86,7 @@ function Table() {
 			return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 		} else {
 			let dividedValue = value.toString().split(".");
-			dividedValue[0] = dividedValue[0].replace(/\B(?=(\d{3})+(?!\d))/g, "-");
+			dividedValue[0] = dividedValue[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 			return dividedValue.join(".");
 		}
 	}
