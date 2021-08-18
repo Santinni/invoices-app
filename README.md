@@ -1,5 +1,5 @@
 # invoicesComponent
-Component "Advances and invoices" will display the data from data.json
+Component "Advances and invoices" will display the data from data.json\
 Design: https://www.figma.com/file/WqafbCOb9qd4XSc9eEOPzQ/Portal
 
 # Getting Started with Create React App
