@@ -7,10 +7,13 @@ export type ButtonProps = {
 	color?: 'primary' | 'secondary',
 	size?: 'small' | 'medium' | 'large',
 	withIcon?: boolean,
-	onClick?: React.MouseEventHandler,
+	onClick: React.MouseEventHandler,
+	customClass?: string,
 };
 
-const Button = ({ title, variant, color, size, withIcon, onClick }: ButtonProps) => {
+const Button = ({ title, variant, color, size, withIcon, onClick, customClass }: ButtonProps) => {
+
+	console.log(customClass);
 
 	const variantClass = () => {
 		if (!variant || variant === "contained") {
@@ -41,7 +44,7 @@ const Button = ({ title, variant, color, size, withIcon, onClick }: ButtonProps)
 	}
 
 	return (
-		<button onClick={onClick} className={`button ${variantClass()} ${colorClass()} ${sizeClass()}`}>
+		<button onClick={onClick} className={`button ${variantClass()} ${colorClass()} ${sizeClass()} ${customClass ? customClass : ""}`}>
 			{title}
 			{
 				withIcon && <Icon name="arrow" />

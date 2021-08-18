@@ -4,6 +4,7 @@
 
 $gap-vertical: 1rem;
 $gap-horizontal: 1rem;
+$gap-10: $gap-vertical*.625;
 
 /* --- Colors --- */
 $color-brand-primary: #00264C;
@@ -46,7 +47,8 @@ $transition: $transition-duration $transition-function;
 
 /* --- Border --- */
 $border-radius: 5px;
-$border-width: 2px;
+$border-width-1: 1px;
+$border-width-2: 2px;
 $border-style-s: solid;
 
 /* --- Mixins --- */

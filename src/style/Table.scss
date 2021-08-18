@@ -1,6 +1,52 @@
 @import "variables";
 
+.grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 2fr 1fr;
+}
+
 .table {
-    @include flexCentered;
-    flex-direction: column;
+	color: $color-brand-primary;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.table__header {
+	width: 100%;
+	line-height: 14px;
+	border-bottom: $border-width-1 $border-style-s $color-gray-2;
+	padding-bottom: $gap-horizontal;
+	padding-top: $gap-horizontal/2;
+}
+
+.table__body {
+	width: 100%;
+	min-height: 3rem;
+}
+
+.table__row {
+	width: 100%;
+	padding: ($gap-horizontal/2) 0;
+
+	&:not(:last-child) {
+		border-bottom: $border-width-1 $border-style-s $color-gray-2;
+	}
+}
+
+.table__data {
+	display: flex;
+	align-items: center;
+	margin-right: $gap-10;
+}
+
+.table__ico {
+	margin-right: $gap-10;
+}
+
+.util-jc-flex-e {
+	justify-content: flex-end;
+}
+
+.util-fw-700 {
+	font-weight: 700;
 }

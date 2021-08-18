@@ -1,0 +1,24 @@
+@import "variables";
+
+.loader {
+	@include flexCentered;
+	width: 100%;
+	padding: $gap-horizontal 0;
+
+	svg {
+		width: 3rem;
+		height: 3rem;
+		fill: $color-brand-primary;
+		animation: Rotate 1500ms infinite linear;
+	}
+}
+
+@keyframes Rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
