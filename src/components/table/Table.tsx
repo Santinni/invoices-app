@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import '../style/Table.scss';
-import DataTypes from '../data/types';
-import Loader from './Loader';
-import TableRow from './TableRow';
+import './style/Table.scss';
+import DataTypes from '../../data/types';
+import Loader from '../loader/Loader';
+import TableRow from '../TableRow';
 
-//TODO: doresit sklonovani dnu pro payment, dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, poresit placeholder pro table content?, mozna roztridit scss k jednotlivym komponentam, poresit handleclick jako jednu fci pro odkazovaci buttony
+//TODO: dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, poresit placeholder pro table content?, poresit handleclick jako jednu fci pro odkazovaci buttony
 
 const Table = () => {
 	const [apiData, setData] = useState<DataTypes.RootObject[]>([]);
@@ -31,7 +31,6 @@ const Table = () => {
 		getData()
 	}, [])
 
-	console.log(apiData)
 	const hasData = apiData && apiData.length > 0 ? true : false;
 
 	return (
