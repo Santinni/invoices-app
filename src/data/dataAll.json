@@ -1,0 +1,197 @@
+[
+  {
+    "supplyPoint": {
+      "id": "a9382f2c-e388-4ef9-9fdf-21107a5ea66f",
+      "name": "Domov 1",
+      "address": "Sokolovská 240, Praha 9"
+    },
+    "period": "08/2020",
+    "type": "advance",
+    "amount": 2700,
+    "currency": "Kč",
+    "state": "pending",
+    "payDueDate": "2021-08-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "71a7b810-b75d-468a-a929-3ac2ab06bb2f",
+      "name": "Domov 2",
+      "address": "Podebradska 240, Praha 9"
+    },
+    "period": "08/2020",
+    "type": "advance",
+    "amount": 2600,
+    "currency": "Kč",
+    "state": "processing",
+    "payDueDate": "2021-08-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "d7cf8312-7fc0-48d8-8d53-db0370cb30d9",
+      "name": "Domov 3",
+      "address": "Zelenecska 240, Praha 9"
+    },
+    "period": "03/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-03-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "1ffd9aa0-cc69-477d-8ee6-b8cc4855a15f",
+      "name": "Domov 4",
+      "address": "Sokolovská 20, Praha 9"
+    },
+    "period": "02/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-02-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "c2064617-923b-41fd-aa44-962b7aceb951",
+      "name": "Domov 5",
+      "address": "V Chaloupkach 240, Praha 9"
+    },
+    "period": "08/2020",
+    "type": "advance",
+    "amount": 2700,
+    "currency": "Kč",
+    "state": "pending",
+    "payDueDate": "2021-08-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "d567c1dc-093f-4aad-8089-f7f2ab61bf33",
+      "name": "Domov 6",
+      "address": "Pod Harfou 1, Praha 9"
+    },
+    "period": "08/2020",
+    "type": "advance",
+    "amount": 2600,
+    "currency": "Kč",
+    "state": "processing",
+    "payDueDate": "2021-08-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "25dfeb04-b442-47eb-8563-874a3628e4ff",
+      "name": "Domov 7",
+      "address": "U Elektry, Praha 9"
+    },
+    "period": "03/2020",
+    "type": "invoice",
+    "amount": 2320,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-03-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "5f83ce63-0d86-4aa5-9312-7a3e2e85be0d",
+      "name": "Domov 8",
+      "address": "Hloubetinska 700, Praha 9"
+    },
+    "period": "02/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-02-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "566ac683-e393-479e-8e9c-28cb43051f67",
+      "name": "Domov 9",
+      "address": "Sadska 5, Praha 9"
+    },
+    "period": "08/2020",
+    "type": "advance",
+    "amount": 2800,
+    "currency": "Kč",
+    "state": "processing",
+    "payDueDate": "2021-08-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "61a3c78b-bb28-4f41-b7b8-ac34865ca22d",
+      "name": "Domov 10",
+      "address": "Mochovska 74, Praha 9"
+    },
+    "period": "03/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-03-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "c20b4619-fe92-4f72-8323-39452c114f77",
+      "name": "Domov 11",
+      "address": "V Humenci 13, Praha 9"
+    },
+    "period": "07/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-07-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "d282c507-5d63-433b-8b10-1a3107e801a0",
+      "name": "Domov 12",
+      "address": "Granitova 111, Praha 9"
+    },
+    "period": "09/2020",
+    "type": "advance",
+    "amount": 2700,
+    "currency": "Kč",
+    "state": "pending",
+    "payDueDate": "2021-09-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "b566cebc-28b1-4907-a3dc-d206754b24ab",
+      "name": "Domov 13",
+      "address": "Kolbenova 147, Praha 9"
+    },
+    "period": "08/2020",
+    "type": "advance",
+    "amount": 2950,
+    "currency": "Kč",
+    "state": "processing",
+    "payDueDate": "2021-08-20"
+  },
+  {
+    "supplyPoint": {
+      "id": "9198b3e3-a5a9-4ce3-bcf9-538191c01168",
+      "name": "Domov 14",
+      "address": "Klanovicka 241, Praha 9"
+    },
+    "period": "03/2020",
+    "type": "invoice",
+    "amount": 2320,
+    "currency": "Kč",
+    "state": "paid",
+    "payDueDate": "2021-03-15"
+  },
+  {
+    "supplyPoint": {
+      "id": "1ffd9aa0-cc69-477d-8ee6-b8cc4855a15f",
+      "name": "Domov 15",
+      "address": "Sadska 65, Praha 9"
+    },
+    "period": "08/2020",
+    "type": "invoice",
+    "amount": 2400,
+    "currency": "Kč",
+    "state": "pending",
+    "payDueDate": "2021-08-15"
+  }
+]
