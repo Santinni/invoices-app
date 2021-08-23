@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import DataTypes from '../data/types'
-import Icon from '../icons';
-import Button from './Button';
+import Icon from './icons';
+import Button from './button/Button';
 
 interface TableRowProps {
     data: DataTypes.RootObject[];
@@ -37,6 +37,12 @@ const TableRow = ({ data }: TableRowProps) => {
         return difDays;
     }
 
+    const dayWord = (dayAmount: number) => {
+        if (dayAmount > 4) { return "dní" };
+        if (dayAmount === 1) { return "den" };
+        if (dayAmount > 1 && dayAmount < 5) { return "dny" };
+    }
+
     const payment = (state: string, duedDate: string) => {
         let days = dateDifference(duedDate);
 
@@ -46,11 +52,11 @@ const TableRow = ({ data }: TableRowProps) => {
             return "Platba se zpracovává"
         } else if (state === "pending") {
             if (days > 0) {
-                return `Splatnost za ${days} dní`
+                return `Splatnost za ${days} ${dayWord(days)}`
             } else if (days < 0) {
-                return `Po splatnosti ${Math.abs(days)} dní`
+                return `Po splatnosti ${Math.abs(days)} ${dayWord(Math.abs(days))}`
             } else {
-                return `Splatno dnes`
+                return "Splatno dnes"
             }
         }
     }
@@ -70,8 +76,8 @@ const TableRow = ({ data }: TableRowProps) => {
     return (
         <>
             {apiData.map(
-                item => (
-                    <div className={`table__row grid ${item.state === 'pending' ? 'util-fw-700' : ""}`}>
+                (item, index) => (
+                    <div key={index} className={`table__row grid ${item.state === 'pending' ? 'util-fw-700' : ""}`}>
                         <div className="table__data">
                             <div className="table__data__ico">
                                 {<Icon name="fire" />}

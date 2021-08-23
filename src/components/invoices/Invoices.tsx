@@ -1,7 +1,7 @@
-import '../style/Invoices.scss';
-import Button from './Button';
+import './style/Invoices.scss';
+import Button from '../button/Button';
 import { useHistory } from 'react-router-dom';
-import Table from './Table';
+import Table from '../table/Table';
 
 
 function Invoices() {

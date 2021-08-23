@@ -1,5 +1,5 @@
-import '../style/Invoices.scss';
-import Button from './Button';
+import './invoices/style/Invoices.scss';
+import Button from './button/Button';
 import { useHistory } from 'react-router';
 
 

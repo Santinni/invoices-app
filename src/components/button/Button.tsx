@@ -1,4 +1,4 @@
-import '../style/Button.scss';
+import './style/Button.scss';
 import Icon from '../icons';
 
 export type ButtonProps = {
@@ -12,8 +12,6 @@ export type ButtonProps = {
 };
 
 const Button = ({ title, variant, color, size, withIcon, onClick, customClass }: ButtonProps) => {
-
-	console.log(customClass);
 
 	const variantClass = () => {
 		if (!variant || variant === "contained") {

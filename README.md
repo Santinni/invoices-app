@@ -3,8 +3,6 @@ Component "Advances and invoices" will display the data from data.json\
 Using Main, DEV and feature branches\
 Design: https://www.figma.com/file/WqafbCOb9qd4XSc9eEOPzQ/Portal
 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
