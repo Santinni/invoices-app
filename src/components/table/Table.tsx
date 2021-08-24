@@ -1,40 +1,30 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import './style/Table.scss';
 import DataTypes from '../../data/types';
 import Loader from '../loader/Loader';
 import TableRow from '../TableRow';
 
-//TODO: dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, poresit placeholder pro table content?, poresit handleclick jako jednu fci pro odkazovaci buttony, poresit filtrovani v tabulce, vyuzit axios
+//TODO: dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, poresit placeholder pro table content?, poresit handleclick jako jednu fci pro odkazovaci buttony, poresit filtrovani v tabulce, poresit Axios async error + loader a message pro uzivatele
 
 interface TableProps {
-	rowNr?: number
+	rowNr?: number;
+	fetchUrl: string
 };
 
-const Table = ({ rowNr }: TableProps) => {
+const Table = ({ rowNr, fetchUrl }: TableProps) => {
 	const [apiData, setData] = useState<DataTypes.RootObject[]>([]);
 	const [loaded, setLoaded] = useState<boolean>(false);
 
-	const getData = () => {
-		fetch('https://mocki.io/v1/f1627b88-04dc-4ef4-a5ce-66ed3f81e005'
-			// fetch('https://mocki.io/v1/d3f6aae8-b7aa-4f41-8cac-9b7c996b75bf'
-			, {
-				headers: {
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				}
-			}
-		)
-			.then(function (response) {
-				return response.json();
-			})
-			.then(function (myJson) {
-				setData(myJson);
-				setLoaded(true);
-			});
-	}
 	useEffect(() => {
-		getData()
-	}, [])
+		async function fetchData() {
+			const request = await axios.get(fetchUrl);
+			setData(request.data);
+			setLoaded(true);
+			return request;
+		}
+		fetchData();
+	}, [fetchUrl]);
 
 	const hasData = apiData && apiData.length > 0 ? true : false;
 
