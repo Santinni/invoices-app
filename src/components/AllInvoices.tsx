@@ -1,6 +1,7 @@
 import './invoices/style/Invoices.scss';
 import Button from './button/Button';
 import { useHistory } from 'react-router';
+import requests from '../data/requests';
 import Table from './table/Table';
 
 
@@ -25,7 +26,7 @@ function AllInvoices() {
 					/>
 				</div>
 				<div className="card__content">
-					<Table />
+					<Table fetchUrl={requests.fetchInvoices} />
 				</div>
 			</div>
 		</>
