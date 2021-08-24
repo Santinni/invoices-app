@@ -6,9 +6,10 @@ import Button from './button/Button';
 
 interface TableRowProps {
     data: DataTypes.RootObject[];
+    rows?: number
 }
 
-const TableRow = ({ data }: TableRowProps) => {
+const TableRow = ({ data, rows }: TableRowProps) => {
 
     const [currentDate, setCurrentDate] = useState(new Date());
     const apiData = data;
@@ -52,7 +53,7 @@ const TableRow = ({ data }: TableRowProps) => {
             return "Platba se zpracovává"
         } else if (state === "pending") {
             if (days > 0) {
-                return `Splatnost za ${days} ${dayWord(days)}`
+                return `Splatno za ${days} ${dayWord(days)}`
             } else if (days < 0) {
                 return `Po splatnosti ${Math.abs(days)} ${dayWord(Math.abs(days))}`
             } else {
@@ -75,7 +76,7 @@ const TableRow = ({ data }: TableRowProps) => {
 
     return (
         <>
-            {apiData.map(
+            {apiData.slice(0, rows).map(
                 (item, index) => (
                     <div key={index} className={`table__row grid ${item.state === 'pending' ? 'util-fw-700' : ""}`}>
                         <div className="table__data">

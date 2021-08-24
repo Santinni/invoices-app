@@ -1,6 +1,7 @@
 import './invoices/style/Invoices.scss';
 import Button from './button/Button';
 import { useHistory } from 'react-router';
+import Table from './table/Table';
 
 
 function AllInvoices() {
@@ -24,9 +25,7 @@ function AllInvoices() {
 					/>
 				</div>
 				<div className="card__content">
-					<p>
-						Výpis záloh a faktur
-					</p>
+					<Table />
 				</div>
 			</div>
 		</>

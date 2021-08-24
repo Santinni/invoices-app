@@ -26,7 +26,7 @@ function Invoices() {
 					/>
 				</div>
 				<div className="card__content">
-					<Table />
+					<Table rowNr={4} />
 				</div>
 			</div>
 		</>
