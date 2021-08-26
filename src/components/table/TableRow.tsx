@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
-import DataTypes from '../data/types'
-import Icon from './icons';
-import Button from './button/Button';
+import DataTypes from '../../data/types'
+import Icon from '../icons';
+import Button from '../button/Button';
 
 interface TableRowProps {
     data: DataTypes.RootObject[];
@@ -63,7 +63,7 @@ const TableRow = ({ data, rows }: TableRowProps) => {
     }
 
     const history = useHistory();
-    const handleClick = (route: string) => history.push(`/${route}`);
+    const handleClick = (route: string, contractData?: any) => history.push({ pathname: `/${route}`, state: contractData });
     const spaceSeparator = (value: number) => {
         if (value % 1 === 0) {
             return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -81,7 +81,7 @@ const TableRow = ({ data, rows }: TableRowProps) => {
                     <div key={index} className={`table__row grid ${item.state === 'pending' ? 'util-fw-700' : ""}`}>
                         <div className="table__data">
                             <div className="table__data__ico">
-                                {<Icon name="fire" />}
+                                <Icon name="fire" />
                             </div>
                             <div className="table__data__item supplyPoint">
                                 <div className="supplyPoint__name">
@@ -137,7 +137,7 @@ const TableRow = ({ data, rows }: TableRowProps) => {
                                         variant="outlined"
                                         size="small"
                                         color="secondary"
-                                        onClick={() => { handleClick("contract-detail"); }} />
+                                        onClick={() => { handleClick("contract-detail", item); }} />
                             }
                         </div>
                     </div>

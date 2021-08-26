@@ -1,35 +1,21 @@
-import './invoices/style/Invoices.scss';
-import Button from './button/Button';
-import { useHistory } from 'react-router';
+import Card from './card/Card';
 
 
-function Pay() {
+const Pay = () => {
 
-	const history = useHistory();
-	const handleClick = () => history.goBack();
+	const buttonProps = {
+		title: "Zpět",
+		variant: "outlined",
+		size: "medium",
+		color: "secondary"
+	}
 
 	return (
-		<>
-			<div className="card">
-				<div className="card__header">
-					<h1>
-						Platební proces
-					</h1>
-					<Button
-						title="Zpět"
-						variant="outlined"
-						size="medium"
-						onClick={handleClick}
-						color="secondary"
-					/>
-				</div>
-				<div className="card__content">
-					<p>
-						Platba
-					</p>
-				</div>
-			</div>
-		</>
+		<Card title="Platební proces" buttonProps={buttonProps}>
+			<p>
+				Platba
+			</p>
+		</Card>
 	);
 }
 
