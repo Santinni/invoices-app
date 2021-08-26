@@ -2,6 +2,8 @@ import './style/Card.scss';
 import Button from '../button/Button';
 import { useHistory } from 'react-router-dom';
 
+//TODO poresit types
+
 const Card = (props: any) => {
     const history = useHistory();
     const handleClick = () => history.goBack();

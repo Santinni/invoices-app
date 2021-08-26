@@ -61,6 +61,12 @@ $border-style-s: solid;
 	align-items: center;
 }
 
+@mixin flexStart {
+    display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 @mixin hoverScale {
     transform: scale(1.05);
 	transition: all $transition;

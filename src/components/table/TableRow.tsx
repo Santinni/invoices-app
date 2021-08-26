@@ -3,6 +3,8 @@ import { useHistory } from 'react-router';
 import DataTypes from '../../data/types'
 import Icon from '../icons';
 import Button from '../button/Button';
+import paymentDue from '../../helpers/paymentDue';
+import { spaceSeparator } from '../../helpers/formaters';
 
 interface TableRowProps {
     data: DataTypes.RootObject[];
@@ -21,58 +23,8 @@ const TableRow = ({ data, rows }: TableRowProps) => {
         });
     }, []);
 
-    const toDate = (date: string) => {
-        let splitedDate = date.split('-').map(item => parseInt(item));
-        let mydate = new Date(splitedDate[0], splitedDate[1] - 1, splitedDate[2]);
-        return (mydate.toDateString());
-    }
-
-    const dateDifference = (dueDate: string) => {
-
-        let date1 = new Date(currentDate);
-        let date2 = new Date(toDate(dueDate));
-
-        let dif = date2.getTime() - date1.getTime();
-        let difDays = Math.floor(dif / (1000 * 3600 * 24));
-
-        return difDays;
-    }
-
-    const dayWord = (dayAmount: number) => {
-        if (dayAmount > 4) { return "dní" };
-        if (dayAmount === 1) { return "den" };
-        if (dayAmount > 1 && dayAmount < 5) { return "dny" };
-    }
-
-    const payment = (state: string, duedDate: string) => {
-        let days = dateDifference(duedDate);
-
-        if (state === "paid") {
-            return "Uhrazeno"
-        } else if (state === "processing") {
-            return "Platba se zpracovává"
-        } else if (state === "pending") {
-            if (days > 0) {
-                return `Splatno za ${days} ${dayWord(days)}`
-            } else if (days < 0) {
-                return `Po splatnosti ${Math.abs(days)} ${dayWord(Math.abs(days))}`
-            } else {
-                return "Splatno dnes"
-            }
-        }
-    }
-
     const history = useHistory();
     const handleClick = (route: string, contractData?: any) => history.push({ pathname: `/${route}`, state: contractData });
-    const spaceSeparator = (value: number) => {
-        if (value % 1 === 0) {
-            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-        } else {
-            let dividedValue = value.toString().split(".");
-            dividedValue[0] = dividedValue[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-            return dividedValue.join(".");
-        }
-    }
 
     return (
         <>
@@ -119,7 +71,7 @@ const TableRow = ({ data, rows }: TableRowProps) => {
                                 }
                             </div>
                             <div className="table__data__item payDueDate">
-                                {item.state && item.payDueDate ? payment(item.state, item.payDueDate) : '-'}
+                                {item.state && item.payDueDate ? paymentDue(item.state, currentDate, item.payDueDate) : '-'}
                             </div>
                         </div>
                         <div className="table__data util-jc-flex-e">
