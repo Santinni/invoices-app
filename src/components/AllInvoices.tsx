@@ -1,35 +1,25 @@
-import './invoices/style/Invoices.scss';
-import Button from './button/Button';
 import { useHistory } from 'react-router';
 import requests from '../data/requests';
+import Card from './card/Card';
 import Table from './table/Table';
 
 
-function AllInvoices() {
+const AllInvoices = () => {
 
 	const history = useHistory();
 	const handleClick = () => history.goBack();
 
+	const buttonProps = {
+		title: "Zpět",
+		variant: "outlined",
+		size: "medium",
+		color: "secondary"
+	}
+
 	return (
-		<>
-			<div className="card">
-				<div className="card__header">
-					<h1>
-						Všechny zálohy a faktury
-					</h1>
-					<Button
-						title="Zpět"
-						variant="outlined"
-						size="medium"
-						onClick={handleClick}
-						color="secondary"
-					/>
-				</div>
-				<div className="card__content">
-					<Table fetchUrl={requests.fetchInvoices} />
-				</div>
-			</div>
-		</>
+		<Card title="Všechny zálohy a faktury" buttonProps={buttonProps} handleClick={handleClick}>
+			<Table fetchUrl={requests.fetchInvoices} />
+		</Card>
 	);
 }
 

@@ -1,8 +1,8 @@
 import { Switch, Route } from 'react-router';
-import Invoices from './components/invoices/Invoices';
+import Invoices from './components/Invoices';
 import AllInvoices from './components/AllInvoices';
 import Pay from './components/Pay';
-import ContractDetail from './components/ContractDetail';
+import ContractDetail from './components/contractDetail/ContractDetail';
 import Error from './components/Error';
 
 function App() {
