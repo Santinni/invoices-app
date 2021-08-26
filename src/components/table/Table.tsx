@@ -5,7 +5,7 @@ import DataTypes from '../../data/types';
 import Loader from '../loader/Loader';
 import TableRow from './TableRow';
 
-//TODO: dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, poresit placeholder pro table content?, poresit handleclick jako jednu fci pro odkazovaci buttony, poresit filtrovani v tabulce, poresit Axios async error + loader a message pro uzivatele
+//TODO: dostylovat pro bp <+-900 + dlazdicove zobrazeni na mobilu??, poresit placeholder pro table content??, poresit handleclick jako jednu fci pro odkazovaci buttony, poresit filtrovani v tabulce, poresit Axios async error stav pri nenacteni dat + loader a message pro uzivatele
 
 interface TableProps {
 	rowNr?: number;
