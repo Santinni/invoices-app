@@ -1,5 +1,5 @@
 import Icon from '../icons';
-import '../style/Loader.scss';
+import './style/Loader.scss';
 
 const Loader = () => {
     return (

@@ -1,0 +1,17 @@
+@import './variables';
+
+.contractDetail__name {
+    font-weight: 700;
+}
+.contractDetail__item {
+    @include flexStart;
+    flex-direction: column;
+    padding-bottom: $gap-horizontal;
+}
+.contractDetail__data {
+	@include flexStart;
+
+    svg {
+        margin-right: $gap-10;
+    }
+}

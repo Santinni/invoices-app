@@ -1,4 +1,4 @@
-@import "variables";
+@import "../../../style/variables";
 
 .grid {
 	display: grid;
@@ -16,7 +16,7 @@
 	line-height: 14px;
 	border-bottom: $border-width-1 $border-style-s $color-gray-2;
 	padding-bottom: $gap-horizontal;
-	padding-top: $gap-horizontal/2;
+	padding-top: $gap-horizontal-half;
 }
 
 .table__body {
@@ -26,7 +26,7 @@
 
 .table__row {
 	width: 100%;
-	padding: ($gap-horizontal/2) 0;
+	padding: $gap-horizontal-half 0;
 
 	&:not(:last-child) {
 		border-bottom: $border-width-1 $border-style-s $color-gray-2;
@@ -39,7 +39,7 @@
 	margin-right: $gap-10;
 }
 
-.table__ico {
+.table__data__ico {
 	margin-right: $gap-10;
 }
 

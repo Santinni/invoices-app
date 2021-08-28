@@ -1,35 +1,26 @@
-import '../style/Invoices.scss';
-import Button from './Button';
 import { useHistory } from 'react-router-dom';
-import Table from './Table';
+import requests from '../data/requests';
+import Card from './card/Card';
+import Table from './table/Table';
 
 
-function Invoices() {
+const Invoices = () => {
 
 	const history = useHistory();
 	const handleClick = () => history.push('/all-invoices');
 
+	const buttonProps = {
+		title: "Zobrazit vše",
+		variant: "text",
+		size: "large",
+		withIcon: true,
+		customClass: "util-mg-l"
+	}
+
 	return (
-		<>
-			<div className="card">
-				<div className="card__header">
-					<h1>
-						Zálohy a faktury
-					</h1>
-					<Button
-						title="Zobrazit vše"
-						variant="text"
-						size="large"
-						withIcon
-						onClick={handleClick}
-						customClass="util-mg-l"
-					/>
-				</div>
-				<div className="card__content">
-					<Table />
-				</div>
-			</div>
-		</>
+		<Card title="Zálohy a faktury" buttonProps={buttonProps} handleClick={handleClick}>
+			<Table rowNr={4} fetchUrl={requests.fetchInvoices} />
+		</Card>
 	);
 }
 

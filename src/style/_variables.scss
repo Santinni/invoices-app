@@ -1,9 +1,12 @@
+@use "sass:math";
+
 /* --- VARIABLES --- */
 
 /* --- Spacing --- */
 
 $gap-vertical: 1rem;
 $gap-horizontal: 1rem;
+$gap-horizontal-half: math.div($gap-horizontal, 2);
 $gap-10: $gap-vertical*.625;
 
 /* --- Colors --- */
@@ -55,6 +58,12 @@ $border-style-s: solid;
 @mixin flexCentered {
     display: flex;
 	justify-content: center;
+	align-items: center;
+}
+
+@mixin flexStart {
+    display: flex;
+	justify-content: flex-start;
 	align-items: center;
 }
 
